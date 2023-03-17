@@ -1,5 +1,43 @@
+@font-face {
+  font-family: "Dance";
+  src: url("/src/style/Dance.ttf");
+}
+
+:root {
+  --font-head: "Dance", Papyrus, fantasy;
+  --font-main: Montserrat, Helvetica, sans-serif;
+
+  --colour-accent: #c86b25;
+  --colour-base: #abc9f9;
+  --colour-background: #28292c;
+  --colour-text: #fff8ee;
+}
+
 * {
   margin: 0;
   padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
   box-sizing: border-box;
+
+  font-family: var(--font-main);
+  color: var(--colour-text);
+
+  transition-property: box-shadow, background, border-color, color, fill, stroke;
+  transition-duration: 175ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body {
+  min-height: 100vh;
+  width: 100vw;
+  background-color: var(--colour-background);
+  overflow-x: hidden;
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
 }
