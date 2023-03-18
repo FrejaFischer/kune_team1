@@ -1,4 +1,66 @@
 ---
 ---
 
-<style></style>
+<div class="text-wrapper">
+  <h2>
+    • tickets are out now • tickets are out now • tickets are out now • tickets
+    are out now • tickets are out now • tickets are out now • tickets are out
+    now • tickets are out now • tickets are out now • tickets are out now •
+    tickets are out now • tickets are
+  </h2>
+  <h2>
+    • tickets are out now • tickets are out now • tickets are out now • tickets
+    are out now • tickets are out now • tickets are out now • tickets are out
+    now • tickets are out now • tickets are out now • tickets are out now •
+    tickets are out now • tickets are
+  </h2>
+  <h2>
+    • tickets are out now • tickets are out now • tickets are out now • tickets
+    are out now • tickets are out now • tickets are out now • tickets are out
+    now • tickets are out now • tickets are out now • tickets are out now •
+    tickets are out now • tickets are
+  </h2>
+  <h2>
+    • tickets are out now • tickets are out now • tickets are out now • tickets
+    are out now • tickets are out now • tickets are out now • tickets are out
+    now • tickets are out now • tickets are out now • tickets are out now •
+    tickets are out now • tickets are
+  </h2>
+</div>
+
+<style>
+  * {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Montserrat, Helvicta, sans-serif;
+  }
+
+  .text-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    background-color: #a3cafd;
+    overflow: hidden;
+  }
+
+  h2 {
+    /* font-size: 2rem; */
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #282323;
+    white-space: nowrap;
+    padding: 0;
+    margin: 0.5rem;
+    letter-spacing: 1px;
+    animation: move_banner 45s linear infinite;
+  }
+
+  @keyframes move_banner {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+</style>
