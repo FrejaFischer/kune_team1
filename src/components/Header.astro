@@ -1,4 +1,90 @@
 ---
+import Ticketbutton from "./Ticketbutton.astro";
 ---
 
-<style></style>
+<header>
+  <img class="watermark" src="/svglogo/watermark.svg" alt="" />
+  <nav>
+    <div class="logo">
+      <a href="/"><img src="/svglogo/hvidlogo.svg" alt="logo" /></a>
+      <p>KUNE <br />Festival</p>
+    </div>
+    <div class="navlinks">
+      <ul>
+        <div class="navbut"><li><a href="lineup.astro">Lineup</a></li></div>
+        <div class="navbut">
+          <li><a href="community.astro">Community</a></li>
+        </div>
+        <div class="navbut"><li><a href="">Info</a></li></div>
+      </ul>
+    </div>
+    <Ticketbutton />
+  </nav>
+</header>
+
+<!-- <script src="../script/"></script> -->
+
+<style>
+  * {
+    box-sizing: border-box;
+    margin: 0;
+  }
+  header {
+    display: block;
+    background-color: #28292c;
+  }
+
+  nav {
+    display: flex;
+    height: 100px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .watermark {
+    position: absolute;
+    height: 100px;
+  }
+
+  .logo {
+    margin: 20px;
+    display: flex;
+    align-items: center;
+  }
+  a {
+    color: #fff8ee;
+    text-decoration: none;
+  }
+  p {
+    color: #fff8ee;
+    margin-left: 10px;
+    font-size: 20px;
+  }
+  li {
+    list-style: none;
+  }
+  .navlinks {
+    /* width: 270px; */
+    /* display: flex; */
+  }
+  ul {
+    display: flex;
+  }
+
+  .navbut {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    width: 100px;
+    background-color: transparent;
+  }
+
+  .navbut:hover {
+    background-color: #c86b25;
+  }
+
+  .navbut a:active {
+    background-color: #c86b25;
+  }
+</style>
