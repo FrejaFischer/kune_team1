@@ -1,4 +1,86 @@
 ---
 ---
 
-<style></style>
+<footer>
+  <div class="bg"></div>
+  <div class="foot">
+    <div class="socials">
+      <div class="mail">
+        <a href="/"><img src="/icons/email_icon.svg" alt="" /></a>
+      </div>
+      <div class="instagram">
+        <a href="/"><img src="/icons/insta_icon.svg" alt="" /></a>
+      </div>
+      <div class="facebook">
+        <a href="/"><img src="/icons/fb_icon.svg" alt="" /></a>
+      </div>
+      <div class="linktree">
+        <a href="/"><img src="/icons/linktr_icon.svg" alt="" /></a>
+      </div>
+      <div class="werz">
+        <a href="/"><img src="/icons/werz_icon.svg" alt="" /></a>
+      </div>
+      <div class="ung">
+        <a href="/"><img src="/icons/ungdoms_icon.svg" alt="" /></a>
+      </div>
+    </div>
+    <div class="kune">
+      <a href="/"><img src="/icons/kune_logo_square.svg" alt="" /></a>
+    </div>
+    <div class="copyright">
+      <p>Copyright © 2023 KUNE</p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  * {
+    box-sizing: border-box;
+    margin: 0;
+  }
+  footer {
+    padding: 1.5rem;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+  }
+  .bg {
+    opacity: 0.3;
+    position: absolute;
+    background-image: url("/icons/kune_logo_square_black.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    z-index: -1;
+    inset: 0;
+    width: 100%;
+    height: auto;
+  }
+  .foot {
+  }
+  .socials {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+    justify-content: center;
+  }
+  .socials img {
+    height: 40px;
+  }
+  .kune {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .kune img {
+    height: 60px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  .copyright p {
+    display: flex;
+    justify-content: center;
+    color: var(--colour-text);
+  }
+</style>

@@ -36,7 +36,6 @@ body {
   width: 100vw;
   background-color: var(--colour-background);
   overflow-x: hidden;
-  display: flex;
 
   justify-content: center;
   align-items: center;

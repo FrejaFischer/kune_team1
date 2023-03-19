@@ -1,4 +1,70 @@
 ---
 ---
 
-<style></style>
+<div class="card">
+  <div class="image">
+    <div class="info">
+      <div class="name">
+        <h3>Name</h3>
+      </div>
+      <div class="country">
+        <p>Country</p>
+      </div>
+    </div>
+    <div>
+      <img class="icon" src="/music_images/vika.webp" alt="" />
+    </div>
+  </div>
+  <div class="date">
+    <p>Date</p>
+  </div>
+</div>
+
+<style>
+  * {
+    box-sizing: border-box;
+    margin: 0;
+  }
+
+  .card {
+    height: 20rem;
+    width: 20rem;
+    background-image: url("/music_images/ricq.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    padding: 0.75rem;
+  }
+
+  .image {
+  }
+
+  .info {
+    color: var(--colour-text);
+    font: var(--font-main);
+    font-size: 30px;
+  }
+
+  .name {
+  }
+
+  .country {
+  }
+
+  .icon {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    height: 3rem;
+    width: 3rem;
+  }
+
+  .date {
+    position: absolute;
+    bottom: 0.75rem;
+    left: 0;
+    right: 0;
+    font-size: 25px;
+    text-align: center;
+  }
+</style>
