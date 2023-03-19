@@ -3,7 +3,6 @@ import Ticketbutton from "./Ticketbutton.astro";
 ---
 
 <header>
-  <img class="watermark" src="/svglogo/watermark.svg" alt="" />
   <nav>
     <div class="logo">
       <a href="/"><img src="/svglogo/hvidlogo.svg" alt="logo" /></a>
@@ -19,6 +18,7 @@ import Ticketbutton from "./Ticketbutton.astro";
       </ul>
     </div>
     <Ticketbutton />
+    <!-- <img class="watermark" src="/svglogo/watermark.svg" alt="" /> -->
   </nav>
 </header>
 
@@ -32,6 +32,7 @@ import Ticketbutton from "./Ticketbutton.astro";
   header {
     display: block;
     background-color: #28292c;
+    background-image: url("/svglogo/watermark.svg");
   }
 
   nav {
@@ -40,6 +41,7 @@ import Ticketbutton from "./Ticketbutton.astro";
     width: 100%;
     justify-content: space-between;
     align-items: center;
+    z-index: 1;
   }
   .watermark {
     position: absolute;
@@ -59,13 +61,14 @@ import Ticketbutton from "./Ticketbutton.astro";
     color: #fff8ee;
     margin-left: 10px;
     font-size: 20px;
+    font-family: Dance;
+    letter-spacing: 1px;
   }
   li {
     list-style: none;
-  }
-  .navlinks {
-    /* width: 270px; */
-    /* display: flex; */
+    /* text-transform: uppercase; */
+    font-family: Dance;
+    letter-spacing: 1px;
   }
   ul {
     display: flex;
@@ -76,7 +79,7 @@ import Ticketbutton from "./Ticketbutton.astro";
     align-items: center;
     justify-content: center;
     height: 100px;
-    width: 100px;
+    width: 120px;
     background-color: transparent;
   }
 
@@ -86,5 +89,10 @@ import Ticketbutton from "./Ticketbutton.astro";
 
   .navbut a:active {
     background-color: #c86b25;
+  }
+
+  .com {
+    padding-left: 10px;
+    padding-right: 10px;
   }
 </style>
