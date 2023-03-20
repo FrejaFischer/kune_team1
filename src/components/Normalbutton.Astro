@@ -2,6 +2,7 @@
 const { variant } = Astro.props;
 ---
 
+<!-- Vælg mellem primary eller secondary variant -->
 <button class={variant}>
   <slot />
 </button>
@@ -10,7 +11,7 @@ const { variant } = Astro.props;
   .primary {
     border-style: solid;
     border-color: #fff8ee;
-    padding: 21px 17px 21px 17px;
+    padding: 17px 21px 17px 21px;
     background-color: transparent;
     color: #fff8ee;
   }
@@ -21,11 +22,20 @@ const { variant } = Astro.props;
   .secondary {
     border-style: solid;
     border-color: #c86b25;
-    padding: 21px 17px 21px 17px;
+    padding: 17px 21px 17px 21px;
     background-color: transparent;
     color: #fff8ee;
   }
   .secondary:hover {
     background-color: #c86b25;
+  }
+
+  @media (max-width: 600px) {
+    .primary {
+      padding: 11px 21px 11px 21px;
+    }
+    .secondary {
+      padding: 11px 21px 11px 21px;
+    }
   }
 </style>
