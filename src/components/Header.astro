@@ -31,7 +31,7 @@ import Ticketbutton from "./Ticketbutton.astro";
   }
   header {
     display: block;
-    background-color: #28292c;
+    background-color: var(--colour-background);
     background-image: url("/svglogo/watermark.svg");
   }
 
@@ -54,11 +54,11 @@ import Ticketbutton from "./Ticketbutton.astro";
     align-items: center;
   }
   a {
-    color: #fff8ee;
+    color: var(--colour-text);
     text-decoration: none;
   }
   p {
-    color: #fff8ee;
+    color: var(--colour-text);
     margin-left: 10px;
     font-size: 20px;
     font-family: Dance;
@@ -84,11 +84,11 @@ import Ticketbutton from "./Ticketbutton.astro";
   }
 
   .navbut:hover {
-    background-color: #c86b25;
+    background-color: var(--colour-accent);
   }
 
   .navbut a:active {
-    background-color: #c86b25;
+    background-color: var(--colour-accent);
   }
 
   .com {
