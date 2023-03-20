@@ -1,4 +1,5 @@
 ---
+import Header from "../components/Header.astro";
 import Normalbutton from "../components/Normalbutton.astro";
 import "../style/style.css";
 ---
@@ -11,15 +12,16 @@ import "../style/style.css";
     <meta name="generator" content={Astro.generator} />
     <title>Astro</title>
   </head>
+  <Header />
   <body>
     <h1>Astro</h1>
     <Normalbutton variant="primary">BUY YOUR TICKET HERE</Normalbutton>
     <Normalbutton variant="secondary">SEND</Normalbutton>
   </body>
-</html>
 
-<style>
-  body {
-    background-color: #28292c;
-  }
-</style>
+  <style>
+    body {
+      background-color: #28292c;
+    }
+  </style>
+</html>
