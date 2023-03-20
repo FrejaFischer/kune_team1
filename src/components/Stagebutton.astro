@@ -1,4 +1,40 @@
 ---
+const stagetype = Astro.props.stagetype;
 ---
 
-<style></style>
+<button>
+  <div id="stagename">
+    <slot />
+  </div>
+  <div class={stagetype} id="icon"></div>
+</button>
+
+<style>
+  button {
+    display: flex;
+  }
+  #icon {
+    width: 30px;
+    height: 30px;
+    align-self: center;
+  }
+  #stagename {
+    align-self: center;
+  }
+
+  .vessel {
+    background-color: aqua;
+  }
+  .space {
+    background-color: rebeccapurple;
+  }
+  .astral {
+    background-color: goldenrod;
+  }
+  .beach {
+    background-color: salmon;
+  }
+  .amphi {
+    background-color: chartreuse;
+  }
+</style>
