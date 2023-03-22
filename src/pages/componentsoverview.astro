@@ -1,1 +1,87 @@
+---
+import Header from "../components/Header.astro";
+import "../style/style.css";
+import Aboutvolunteerbuttom from "../components/Aboutvolunteerbutton.astro";
+import Artistcard from "../components/Artistcard.astro";
+import Footer from "../components/Footer.astro";
+import Banner from "../components/banner.astro";
+import Metahead from "../components/Metahead.astro";
 
+import Normalbutton from "../components/Normalbutton.astro";
+import Stagebutton from "../components/Stagebutton.astro";
+import Ticketbutton from "../components/Ticketbutton.astro";
+import Timer from "../components/Timer.astro";
+import Volunteerform from "../components/Volunteerform.astro";
+---
+
+<Metahead titel="Components Overview">
+  <header></header>
+  <main>
+    <h1>Components Overview</h1>
+    <h2>Her ses er overblik over vores componenter</h2>
+
+    <h3>Header og Footer</h3>
+    <Header />
+    <Footer />
+
+    <h3>Knapper</h3>
+    <div class="knapper">
+      <Normalbutton variant="primary">SEE PROGRAM</Normalbutton>
+      <Normalbutton variant="primary">GET YOUR TICKET NOW</Normalbutton>
+      <Normalbutton variant="secondary">SEND</Normalbutton>
+      <Ticketbutton />
+    </div>
+    <div class="stages">
+      <Stagebutton stagetype="vessel">Vessel</Stagebutton>
+      <Stagebutton stagetype="space">Space</Stagebutton>
+      <Stagebutton stagetype="astral">Astral</Stagebutton>
+      <Stagebutton stagetype="beach">Beach</Stagebutton>
+      <Stagebutton stagetype="amphi">Amphi</Stagebutton>
+    </div>
+
+    <h3>Animerede elementer</h3>
+    <Banner />
+    <Timer />
+
+    <h3>Artist Card</h3>
+    <Artistcard />
+
+    <h3>Forms</h3>
+    <Volunteerform />
+  </main>
+  <footer></footer>
+</Metahead>
+
+<style>
+  main {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 10%;
+  }
+  .stages {
+    width: 600px;
+    display: flex;
+    justify-content: space-between;
+  }
+  h1 {
+    margin-bottom: 1rem;
+    font-size: 40px;
+    font-family: Dance;
+  }
+  h2 {
+    font-size: 25px;
+    margin-bottom: 3rem;
+  }
+
+  h3 {
+    font-size: 20px;
+    margin-bottom: 1rem;
+    margin-top: 5rem;
+  }
+
+  .knapper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+  }
+</style>
