@@ -1,4 +1,80 @@
 ---
+import Normalbutton from "./Normalbutton.astro";
 ---
 
-<style></style>
+<div class="pic-cover">
+  <section class="box-bg">
+    <form class="box-line">
+      <p>
+        Do you want to become a volunteer? <br />
+        Contact us here:
+      </p>
+
+      <label for="name"></label>
+      <input type="text" id="name" placeholder="Name" />
+
+      <label for="email"></label>
+      <input type="email" name="email" id="email" placeholder="E-mail" />
+      <div class="btn">
+        <Normalbutton variant="secondary">SEND</Normalbutton>
+      </div>
+    </form>
+  </section>
+</div>
+
+<style>
+  .pic-cover {
+    background-image: url(/images/Landingpage_image.webp);
+  }
+  .box-bg {
+    max-width: 55.688rem;
+    height: 34.125rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #28292cc9;
+    margin: auto;
+  }
+
+  form {
+    display: grid;
+    justify-items: center;
+    padding: 2vw 4vw;
+    width: 47.173rem;
+    height: 25.274rem;
+  }
+
+  input {
+    background-color: var(--colour-text);
+    width: 24.771rem;
+    height: 3.518rem;
+    margin: 1rem;
+    padding: 0.688rem 0.688rem 0.688rem 0.688rem;
+    border-radius: 0.125rem;
+  }
+
+  /* ::placerholder {
+    font-weight: 400;
+    font-size: 26px;
+  } */
+  .box-line {
+    margin: 2rem auto;
+    border: 0.125rem solid #fff8ee;
+    padding: 3rem;
+  }
+
+  p {
+    font-size: 1.625rem;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @mediaqueries {
+  }
+</style>
