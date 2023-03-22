@@ -2,33 +2,33 @@
 import Normalbutton from "./Normalbutton.astro";
 ---
 
-<!-- <div class="pic-cover"> -->
-<section class="box-bg">
-  <form class="box-line">
-    <p>
-      Do you want to become a volunteer? <br />
-      Contact us here:
-    </p>
+<div class="pic-cover">
+  <section class="box-bg">
+    <form class="box-line">
+      <p>
+        Do you want to become a volunteer? <br />
+        Contact us here:
+      </p>
 
-    <label for="name"></label>
-    <input type="text" id="name" placeholder="Name" />
+      <label for="name"></label>
+      <input type="text" id="name" placeholder="Name" />
 
-    <label for="email"></label>
-    <input type="email" name="email" id="email" placeholder="E-mail" />
-    <div class="btn">
-      <Normalbutton variant="secondary">SEND</Normalbutton>
-    </div>
-  </form>
-</section>
-<!-- </div> -->
+      <label for="email"></label>
+      <input type="email" name="email" id="email" placeholder="E-mail" />
+      <div class="btn">
+        <Normalbutton variant="secondary">SEND</Normalbutton>
+      </div>
+    </form>
+  </section>
+</div>
 
 <style>
-  /* .pic-cover {
-    background-image: url(./public/images/Landingpage_image.webp);
-  } */
+  .pic-cover {
+    background-image: url(/images/Landingpage_image.webp);
+  }
   .box-bg {
-    max-width: 891px;
-    height: 546px;
+    max-width: 55.688rem;
+    height: 34.125rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -40,29 +40,31 @@ import Normalbutton from "./Normalbutton.astro";
     display: grid;
     justify-items: center;
     padding: 2vw 4vw;
-    width: 754.77px;
-    height: 404.38px;
+    width: 47.173rem;
+    height: 25.274rem;
   }
 
   input {
-    width: 396.34px;
-    height: 56.29px;
+    background-color: var(--colour-text);
+    width: 24.771rem;
+    height: 3.518rem;
     margin: 1rem;
-    border-radius: 2px;
+    padding: 0.688rem 0.688rem 0.688rem 0.688rem;
+    border-radius: 0.125rem;
   }
 
-  ::placerholder {
+  /* ::placerholder {
     font-weight: 400;
     font-size: 26px;
-  }
+  } */
   .box-line {
     margin: 2rem auto;
-    border: 2px solid #fff8ee;
+    border: 0.125rem solid #fff8ee;
     padding: 3rem;
   }
 
   p {
-    font-size: 26px;
+    font-size: 1.625rem;
     text-align: center;
     margin-bottom: 2rem;
   }
@@ -71,10 +73,6 @@ import Normalbutton from "./Normalbutton.astro";
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-  input {
-    padding: 11px 11px 11px 11px;
-    background-color: var(--colour-text);
   }
 
   @mediaqueries {
