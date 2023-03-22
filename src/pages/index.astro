@@ -1,5 +1,7 @@
 ---
 import Header from "../components/Header.astro";
+import Banner from "../components/Banner.astro";
+import Normalbutton from "../components/Normalbutton.astro";
 import "../style/style.css";
 ---
 
@@ -11,14 +13,112 @@ import "../style/style.css";
     <meta name="generator" content={Astro.generator} />
     <title>Astro</title>
   </head>
-  <Header />
-  <body>
-    <h1>Astro</h1>
-  </body>
 
-  <style>
-    body {
-      background-color: #28292c;
-    }
-  </style>
+  <body>
+    <div class="front-page">
+      <Header />
+      <Banner />
+      <div class="front-socials">
+        <a href="/"> <img src="../icons/email_icon.svg" /></a>
+        <a href="/"> <img src="../icons/insta_icon.svg" /></a>
+        <a href="/"> <img src="../icons/fb_icon.svg" /></a>
+        <a href="/"> <img src="../icons/linktr_icon.svg" /></a>
+        <a href="/"> <img src="../icons/werz_icon.svg" /></a>
+        <a href="/"> <img src="../icons/ungdoms_icon.svg" /></a>
+      </div>
+      <div class="front-copyright">
+        <p>Copyright © 2023 KUNE</p>
+      </div>
+      <div class="front-text">
+        <div class="front-hero">
+          <h1>Kune<br />Festival</h1>
+        </div>
+        <div class="front-countdown">
+          <h2>41 23:36:21</h2>
+        </div>
+        <div class="front-button">
+          <Normalbutton variant="primary">BUY YOUR TICKET HERE</Normalbutton>
+        </div>
+      </div>
+    </div>
+
+    <style>
+      body {
+        background-color: var(--colour-background);
+        background-image: url(../images/Landingpage_image.webp);
+        background-repeat: no-repeat;
+        background-size: cover;
+        object-fit: cover;
+        z-index: -1;
+      }
+
+      h1 {
+        font-size: 7rem;
+        font-family: var(--font-head);
+        letter-spacing: 0.6rem;
+        text-align: center;
+        text-shadow: 4px 4px black;
+      }
+      .front-hero {
+        display: flex;
+        justify-content: center;
+        color: var(--colour-text);
+      }
+
+      .front-countdown h2 {
+        display: flex;
+        justify-content: center;
+        color: var(--colour-accent);
+        font-size: 3rem;
+        text-shadow: 2px 2px black;
+      }
+
+      .front-button {
+        display: flex;
+        justify-content: center;
+      }
+
+      .front-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        flex-grow: 1;
+        margin-top: -6rem;
+      }
+
+      .front-page {
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+
+      .front-socials {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0.5rem;
+      }
+
+      .front-socials a {
+        transform: scale(0.95);
+        transition: transform 0.5s;
+      }
+
+      .front-socials a:hover {
+        transform: scale(1);
+      }
+
+      .front-copyright {
+        position: absolute;
+        bottom: 1rem;
+        right: 1rem;
+      }
+    </style>
+  </body>
 </html>
