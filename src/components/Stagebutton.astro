@@ -3,10 +3,10 @@ const stagetype = Astro.props.stagetype;
 ---
 
 <button>
+  <div class={stagetype} id="icon"></div>
   <div id="stagename">
     <slot />
   </div>
-  <div class={stagetype} id="icon"></div>
 </button>
 
 <style>
@@ -17,24 +17,43 @@ const stagetype = Astro.props.stagetype;
     width: 30px;
     height: 30px;
     align-self: center;
+    margin-right: 10px;
   }
   #stagename {
     align-self: center;
   }
+  button:hover #stagename{
+    color: var(--colour-accent);
+  }
 
   .vessel {
-    background-color: aqua;
+    background-image: url("../stageicons/vessel.svg");
+  }
+  button:hover .vessel{
+    background-image: url("../stageicons/vessel_hover.svg");
   }
   .space {
-    background-color: rebeccapurple;
+    background-image: url("../stageicons/space.svg");
+  }
+  button:hover .space{
+    background-image: url("../stageicons/space_hover.svg");
   }
   .astral {
-    background-color: goldenrod;
+    background-image: url("../stageicons/astral.svg");
+  }
+  button:hover .astral{
+    background-image: url("../stageicons/astral_hover.svg");
   }
   .beach {
-    background-color: salmon;
+    background-image: url("../stageicons/beach.svg");
+  }
+  button:hover .beach{
+    background-image: url("../stageicons/beach_hover.svg");
   }
   .amphi {
-    background-color: chartreuse;
+    background-image: url("../stageicons/amphi.svg");
+  }
+  button:hover .amphi{
+    background-image: url("../stageicons/amphi_hover.svg");
   }
 </style>
