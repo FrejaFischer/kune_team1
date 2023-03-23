@@ -5,6 +5,7 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import Banner from "../components/Banner.astro";
 import Aboutvolunteerbutton from "../components/Aboutvolunteerbutton.astro";
+import Volunteerform from "../components/Volunteerform.astro";
 ---
 
 <Metahead title="Community">
@@ -16,10 +17,10 @@ import Aboutvolunteerbutton from "../components/Aboutvolunteerbutton.astro";
       <h3>Embrace the Otherness</h3>
     </section>
     <section id="button_section">
-      <Aboutvolunteerbutton>ABOUT KUNE</Aboutvolunteerbutton>
-      <Aboutvolunteerbutton>VOLUNTEER</Aboutvolunteerbutton>
+      <Aboutvolunteerbutton id="about_button">ABOUT KUNE</Aboutvolunteerbutton>
+      <Aboutvolunteerbutton id="volunteer_button">VOLUNTEER</Aboutvolunteerbutton>
     </section>
-    <div id="about" class="hide">
+    <div id="about">
       <section id="kune_festival_section">
         <h2>KUNE FESTIVAL</h2>
         <div>
@@ -60,7 +61,7 @@ import Aboutvolunteerbutton from "../components/Aboutvolunteerbutton.astro";
       </section>
       <img src="../images/community_sunset.webp" alt="" id="sunset" />
     </div>
-    <div id="volunteer">
+    <div id="volunteer" class="hide">
       <section id="why_volunteer_section">
         <h2>WHY VOLUNTEER?</h2>
         <div>
@@ -90,9 +91,13 @@ import Aboutvolunteerbutton from "../components/Aboutvolunteerbutton.astro";
           together to bring the festival to life.
         </p>
       </section>
+      <section id="form_section">
+        <Volunteerform />
+      </section>
     </div>
   </main>
   <Footer />
+  <script src="../js/community.js"></script>
 </Metahead>
 
 <style>
@@ -289,7 +294,7 @@ import Aboutvolunteerbutton from "../components/Aboutvolunteerbutton.astro";
   #why_volunteer_section div {
     background-color: #ffffff;
     opacity: 82%;
-    width: 40%;
+    /* width: 40%; */
     align-self: center;
     justify-self: center;
     padding: 50px 80px 50px 80px;
@@ -299,30 +304,70 @@ import Aboutvolunteerbutton from "../components/Aboutvolunteerbutton.astro";
     line-height: 32px;
   }
   #how_we_work {
-    height: 550px;
     display: grid;
     grid-template-rows: 1fr 4fr;
     grid-template-columns: 1fr 1fr;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    justify-self: end;
   }
   #how_we_work h2 {
     font-family: var(--font-head);
     font-size: 4rem;
     grid-row: 1/2;
-    grid-column: 1/2;
+    grid-column: 1/3;
     align-self: center;
     justify-self: start;
-    margin-left: 40px;
+    margin-left: 12%;
   }
   #how_we_work p:first-of-type {
-    color: hotpink;
+    color: var(--colour-text);
     grid-row: 2/3;
     grid-column: 1/2;
-    margin-left: 40px;
-    width: 80%;
+    width: 65%;
+    margin-left: 25%;
+    justify-self: start;
+    line-height: 32px;
   }
   #how_we_work p:last-of-type {
-    color: orange;
+    color: var(--colour-text);
     grid-row: 2/3;
     grid-column: 2/3;
+    width: 65%;
+    margin-left: 40px;
+    line-height: 32px;
+  }
+
+  #form_section {
+    background-image: url("../images/community_collage.webp");
+    background-size: cover;
+    width: 100%;
+  }
+
+  @media (max-width: 600px) {
+    #how_we_work {
+      display: grid;
+      grid-template-rows: 1fr 2fr 2fr;
+      grid-template-columns: 1fr;
+      margin-top: 40px;
+      margin-bottom: 40px;
+    }
+    #how_we_work h2 {
+      grid-row: 1/2;
+      grid-column: 1/2;
+      margin-left: 18%;
+    }
+    #how_we_work p:first-of-type {
+      grid-row: 2/3;
+      grid-column: 1/2;
+      margin-left: 0%;
+      justify-self: center;
+    }
+    #how_we_work p:last-of-type {
+      grid-row: 3/4;
+      grid-column: 1/2;
+      margin-left: 0px;
+      justify-self: center;
+    }
   }
 </style>
