@@ -1,0 +1,139 @@
+---
+import { createClient } from "@supabase/supabase-js";
+import Artistcard from "../components/Artistcard.astro";
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import Normalbutton from "../components/Normalbutton.astro";
+import Stagebutton from "../components/Stagebutton.astro";
+import Ticketbutton from "../components/Ticketbutton.astro";
+import "../style/style.css";
+
+const supabaseUrl = "https://lknjocuybcipxwdjwhuf.supabase.co";
+const supabaseKey = import.meta.env.SUPABASE;
+const supabase = createClient(supabaseUrl, supabaseKey);
+
+let { data } = await supabase.from("Kune_artist").select("*");
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro</title>
+  </head>
+  <body>
+    <Header />
+    <main>
+      <section id="header_lineup">
+        <h1>LINE UP</h1>
+      </section>
+      <div id="container_program" class="knapper">
+        <Normalbutton variant="primary">SEE PROGRAM</Normalbutton>
+      </div>
+      <h2><strong>MUSIC</strong></h2>
+      <h3>STAGES</h3>
+
+      <div id="container_stages" class="stages">
+        <Stagebutton stagetype="vessel">Vessel</Stagebutton>
+        <Stagebutton stagetype="space">Space</Stagebutton>
+        <Stagebutton stagetype="astral">Astral</Stagebutton>
+        <Stagebutton stagetype="beach">Beach</Stagebutton>
+        <Stagebutton stagetype="amphi">Amphi</Stagebutton>
+      </div>
+      <div id="content">
+        {
+          (data || []).map(({ name, country, stageimage, genre, image }) => (
+            <Artistcard
+              name={name}
+              country={country}
+              icon={stageimage}
+              genre={genre}
+              bg={image}
+            />
+          ))
+        }
+      </div>
+    </main>
+
+    <Footer />
+  </body>
+</html>
+
+<style>
+  body {
+    background-color: var(--colour-background);
+  }
+
+  #content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    max-width: 1300px;
+    margin: 0 auto;
+  }
+  #header_lineup {
+    background-image: url("../images/Lineup_image.webp");
+    background-size: cover;
+    width: 100%;
+    height: 450px;
+    display: grid;
+    justify-content: center;
+    align-content: space-evenly;
+  }
+
+  h1 {
+    font-family: var(--font-head);
+    font-size: 5rem;
+    align-self: end;
+    color: var(--colour-text);
+    text-shadow: 0.25rem 0.25rem black;
+  }
+
+  #container_program {
+    display: flex;
+    justify-content: center;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  #container_stages {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    margin-bottom: 1.5rem;
+    padding-left: 26.5rem;
+    padding-right: 26.5rem;
+  }
+  h2 {
+    text-align: center;
+    margin-top: 1.688rem;
+    margin-bottom: 1.688rem;
+    font-size: 25px;
+  }
+
+  h3 {
+    text-align: center;
+    margin-top: 1.688rem;
+    margin-bottom: 1.688rem;
+  }
+
+  .stages {
+    /* width: 600px; */
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @media (max-width: 600px) {
+    #container_stages {
+      display: flex;
+      padding: 4px;
+      margin: 0;
+      margin-bottom: 1.5rem;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+</style>
