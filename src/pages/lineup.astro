@@ -1,0 +1,54 @@
+---
+import { createClient } from "@supabase/supabase-js";
+import Artistcard from "../components/Artistcard.astro";
+import Footer from "../components/Footer.astro";
+import "../style/style.css";
+
+const supabaseUrl = "https://lknjocuybcipxwdjwhuf.supabase.co";
+const supabaseKey = import.meta.env.SUPABASE;
+const supabase = createClient(supabaseUrl, supabaseKey);
+
+let { data } = await supabase.from("Kune_artist").select("*");
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro</title>
+  </head>
+  <body>
+    <main id="content">
+      {
+        (data || []).map(({ name, country, stageimage, genre, image }) => (
+          <Artistcard
+            name={name}
+            country={country}
+            icon={stageimage}
+            genre={genre}
+            bg={image}
+          />
+        ))
+      }
+    </main>
+
+    <Footer />
+  </body>
+</html>
+
+<style>
+  body {
+    background-color: var(--colour-background);
+  }
+
+  #content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    max-width: 1300px;
+    margin: 0 auto;
+  }
+</style>
