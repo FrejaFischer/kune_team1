@@ -1,0 +1,373 @@
+---
+import "../style/style.css";
+import Metahead from "../components/Metahead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import Banner from "../components/Banner.astro";
+import Aboutvolunteerbutton from "../components/Aboutvolunteerbutton.astro";
+import Volunteerform from "../components/Volunteerform.astro";
+---
+
+<Metahead title="Community">
+  <Header />
+  <main>
+    <Banner />
+    <section id="header_about">
+      <h1>COMMUNITY</h1>
+      <h3>Embrace the Otherness</h3>
+    </section>
+    <section id="button_section">
+      <Aboutvolunteerbutton id="about_button">ABOUT KUNE</Aboutvolunteerbutton>
+      <Aboutvolunteerbutton id="volunteer_button">VOLUNTEER</Aboutvolunteerbutton>
+    </section>
+    <div id="about">
+      <section id="kune_festival_section">
+        <h2>KUNE FESTIVAL</h2>
+        <div>
+          <p>
+            A 5-day electronic music festival that takes place on an island 30 minutes away from Copenhagen. A one-of-its-kind celebration of the Scandinavian underground culture. A playground with five stages, two art galleries, and multiple art
+            installations. An intimate, holistic experience with access to a camping ground, food area, dipping spot, and unique sunsets. A true hidden gem.
+          </p>
+        </div>
+      </section>
+      <section id="what_is_kune">
+        <h2>WHAT IS KUNE?</h2><p>
+          KUNE was started by a group of friends, who met each other trough the music. Together they wanted to create a nordic cultural festival, which could be a free room for small artist to strengthen the underground culture in Copenhagen. The
+          festival can contain up to 1000 guest and gives a platform for over 100 artist every year.
+        </p>
+        <img src="../images/community_small_bench.webp" alt="" />
+      </section>
+      <section id="kune_language">
+        <img src="../images/community_language.webp" alt="" />
+        <h3>KUNE comes from the made up language esperanto and means 'Togetherness'. This connects with the vision about bringing people toghether and let our the differences connect us.</h3>
+      </section>
+      <section id="embracing">
+        <h2>EMBRACING THE "OTHERNESS"</h2>
+        <p>
+          By embracing Otherness, we create an inclusive, open-minded world that appreciates differences as sources of strength and beauty, rather than conflict. This element encourages seeing the world through others' eyes, listening to their
+          stories, and appreciating their unique perspectives to expand our understanding of humanity.
+        </p>
+        <img src="../images/community_flag.webp" alt="" />
+      </section>
+      <section id="non_profit">
+        <h2>"NON PROFIT FUELED BY PASSION"</h2>
+        <p>
+          We, at KUNE festival, are committed to being as eco-friendly as possible. To achieve this goal, we are digitizing many aspects of the festival, including art installations, tickets, and the festival program. We post primarily on digital
+          platforms to reduce paper waste.
+          <br />
+          <br />
+          As a non-profit event, we are dedicated to promoting our message and providing an enriching experience for our guests, and volunteers helping to make this festival possible.
+        </p>
+      </section>
+      <img src="../images/community_sunset.webp" alt="" id="sunset" />
+    </div>
+    <div id="volunteer" class="hide">
+      <section id="why_volunteer_section">
+        <h2>WHY VOLUNTEER?</h2>
+        <div>
+          <ul>
+            <li>Free ticket to the festival</li>
+            <li>Food and drink tickets for your shifts</li>
+            <li>Access to volunteer events before and after the festival</li>
+            <li>Opportunity to contribute in a creative environment</li>
+            <li>Meet new people!</li>
+          </ul>
+        </div>
+      </section>
+      <section id="how_we_work">
+        <h2>HOW WE WORK</h2>
+        <p>
+          At KUNE, we strive to create an environment where volunteers feel empowered and their contribution is recognized and appreciated. We offer opportunities for personal and professional development, such as training and workshops, and a chance
+          to meet new people, work with artists, and uniquely experience the festival.
+          <br />
+          <br />
+          Volunteering with KUNE Festival is a way to give back to the community while co-creating and shaping the festival experience with us.
+        </p>
+        <p>
+          Our volunteers are a diverse group of individuals who come from different backgrounds, cultures, and age groups. Yet, they share a common passion for music, art, and creating a meaningful experience for others.
+          <br />
+          <br />
+          Everyone has something valuable to bring to the table, and we are committed to ensuring that all our volunteers feel welcome, respected, and valued. The community of volunteers is supportive, and we are always excited to see how everyone comes
+          together to bring the festival to life.
+        </p>
+      </section>
+      <section id="form_section">
+        <Volunteerform />
+      </section>
+    </div>
+  </main>
+  <Footer />
+  <script src="../js/community.js"></script>
+</Metahead>
+
+<style>
+  .hide {
+    display: none;
+  }
+  #header_about {
+    background-image: url("../images/community_image.webp");
+    background-size: cover;
+    width: 100%;
+    height: 450px;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    justify-content: center;
+  }
+  h1 {
+    font-family: var(--font-head);
+    font-size: 5rem;
+    align-self: end;
+    color: var(--colour-text);
+  }
+  h3 {
+    font-size: 2rem;
+    align-self: baseline;
+    justify-self: center;
+    color: var(--colour-accent);
+    width: fit-content;
+  }
+  p {
+    font-size: 1rem;
+  }
+
+  #button_section {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding-right: 25%;
+    padding-left: 25%;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  #kune_festival_section {
+    background-image: url("../images/community_isle.webp");
+    background-size: cover;
+    width: 100%;
+    height: 592px;
+    display: grid;
+    grid-template-rows: 1fr 3fr;
+  }
+  #kune_festival_section h2 {
+    font-family: var(--font-head);
+    font-size: 4rem;
+    align-self: end;
+    justify-self: center;
+  }
+  #kune_festival_section div {
+    background-color: #ffffff;
+    opacity: 82%;
+    width: 70%;
+    align-self: center;
+    justify-self: center;
+    padding: 50px 100px 50px 100px;
+  }
+  #kune_festival_section p {
+    color: var(--colour-background);
+    line-height: 32px;
+  }
+
+  #what_is_kune {
+    width: 100%;
+    height: 595px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 4fr;
+    overflow: hidden;
+  }
+  #what_is_kune img {
+    grid-column: 2/3;
+    grid-row: 1/3;
+    width: 100%;
+  }
+  #what_is_kune h2 {
+    font-family: var(--font-head);
+    font-size: 4rem;
+    align-self: center;
+    justify-self: start;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    margin: 80px 40px 40px 40px;
+  }
+  #what_is_kune p {
+    color: var(--colour-text);
+    line-height: 32px;
+    grid-column: 1/2;
+    grid-row: 2/3;
+    margin: 15px 40px 40px 40px;
+  }
+
+  #kune_language {
+    height: 481px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+  #kune_language img {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 61%;
+  }
+  #kune_language h3 {
+    color: var(--colour-text);
+    align-self: center;
+    text-align: center;
+    line-height: 80px;
+    width: 60%;
+    position: relative;
+  }
+
+  #embracing {
+    width: 100%;
+    height: 595px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 4fr;
+    overflow: hidden;
+  }
+  #embracing img {
+    grid-column: 1/2;
+    grid-row: 1/3;
+    width: 100%;
+  }
+  #embracing h2 {
+    font-family: var(--font-head);
+    font-size: 4rem;
+    align-self: center;
+    justify-self: start;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    margin: 80px 40px 40px 40px;
+  }
+  #embracing p {
+    color: var(--colour-text);
+    line-height: 32px;
+    grid-column: 2/3;
+    grid-row: 2/3;
+    margin: 15px 60px 40px 40px;
+  }
+
+  #non_profit {
+    background: linear-gradient(rgba(40, 41, 44, 0.5), rgba(244, 126, 37, 0.5));
+    width: 100%;
+    height: 588px;
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+  }
+  #non_profit h2 {
+    font-family: var(--font-head);
+    font-size: 4rem;
+    align-self: center;
+    justify-self: center;
+    grid-row: 1/2;
+    /* margin: 80px 40px 40px 40px; */
+  }
+  #non_profit p {
+    color: var(--colour-text);
+    line-height: 32px;
+    grid-column: 1/2;
+    grid-row: 2/3;
+    width: 60%;
+    justify-self: center;
+  }
+  #sunset {
+    width: 100%;
+  }
+
+  #why_volunteer_section {
+    background-image: url("../images/community_wide_bench.webp");
+    background-size: cover;
+    width: 100%;
+    height: 592px;
+    display: grid;
+    grid-template-rows: 1fr 3fr;
+  }
+  #why_volunteer_section h2 {
+    font-family: var(--font-head);
+    font-size: 4rem;
+    align-self: end;
+    justify-self: center;
+  }
+  #why_volunteer_section div {
+    background-color: #ffffff;
+    opacity: 82%;
+    /* width: 40%; */
+    align-self: center;
+    justify-self: center;
+    padding: 50px 80px 50px 80px;
+  }
+  #why_volunteer_section ul li {
+    color: var(--colour-background);
+    line-height: 32px;
+  }
+  #how_we_work {
+    display: grid;
+    grid-template-rows: 1fr 4fr;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    justify-self: end;
+  }
+  #how_we_work h2 {
+    font-family: var(--font-head);
+    font-size: 4rem;
+    grid-row: 1/2;
+    grid-column: 1/3;
+    align-self: center;
+    justify-self: start;
+    margin-left: 12%;
+  }
+  #how_we_work p:first-of-type {
+    color: var(--colour-text);
+    grid-row: 2/3;
+    grid-column: 1/2;
+    width: 65%;
+    margin-left: 25%;
+    justify-self: start;
+    line-height: 32px;
+  }
+  #how_we_work p:last-of-type {
+    color: var(--colour-text);
+    grid-row: 2/3;
+    grid-column: 2/3;
+    width: 65%;
+    margin-left: 40px;
+    line-height: 32px;
+  }
+
+  #form_section {
+    background-image: url("../images/community_collage.webp");
+    background-size: cover;
+    width: 100%;
+  }
+
+  @media (max-width: 600px) {
+    #how_we_work {
+      display: grid;
+      grid-template-rows: 1fr 2fr 2fr;
+      grid-template-columns: 1fr;
+      margin-top: 40px;
+      margin-bottom: 40px;
+    }
+    #how_we_work h2 {
+      grid-row: 1/2;
+      grid-column: 1/2;
+      margin-left: 18%;
+    }
+    #how_we_work p:first-of-type {
+      grid-row: 2/3;
+      grid-column: 1/2;
+      margin-left: 0%;
+      justify-self: center;
+    }
+    #how_we_work p:last-of-type {
+      grid-row: 3/4;
+      grid-column: 1/2;
+      margin-left: 0px;
+      justify-self: center;
+    }
+  }
+</style>
