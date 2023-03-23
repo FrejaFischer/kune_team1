@@ -1,7 +1,9 @@
 ---
+const id = Astro.props.id;
+const view = Astro.props.class;
 ---
 
-<button>TICKETS</button>
+<button id={id} class={view}>TICKETS</button>
 
 <style>
   button {
