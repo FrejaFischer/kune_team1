@@ -11,10 +11,16 @@ import Normalbutton from "./Normalbutton.astro";
       </p>
 
       <label for="name"></label>
-      <input type="text" id="name" placeholder="Name" />
+      <input class="forms" type="text" id="name" placeholder="Name" />
 
       <label for="email"></label>
-      <input type="email" name="email" id="email" placeholder="E-mail" />
+      <input
+        class="forms"
+        type="email"
+        name="email"
+        id="email"
+        placeholder="E-mail"
+      />
       <div class="btn">
         <Normalbutton variant="secondary">SEND</Normalbutton>
       </div>
@@ -53,14 +59,15 @@ import Normalbutton from "./Normalbutton.astro";
     border-radius: 0.125rem;
   }
 
-  ::placeholder {
+  .forms {
     font-weight: 400;
     font-size: 26px;
     color: var(--colour-background);
   }
+
   .box-line {
     margin: 2rem auto;
-    border: 0.125rem solid #fff8ee;
+    border: 0.125rem solid var(--colour-text);
     padding: 3rem;
   }
 

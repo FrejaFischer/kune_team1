@@ -6,12 +6,19 @@ import Artistcard from "../components/Artistcard.astro";
 import Footer from "../components/Footer.astro";
 import Banner from "../components/banner.astro";
 import Metahead from "../components/Metahead.astro";
+import { createClient } from "@supabase/supabase-js";
 
 import Normalbutton from "../components/Normalbutton.astro";
 import Stagebutton from "../components/Stagebutton.astro";
 import Ticketbutton from "../components/Ticketbutton.astro";
 import Timer from "../components/Timer.astro";
 import Volunteerform from "../components/Volunteerform.astro";
+
+const supabaseUrl = "https://lknjocuybcipxwdjwhuf.supabase.co";
+const supabaseKey = import.meta.env.SUPABASE;
+const supabase = createClient(supabaseUrl, supabaseKey);
+
+let { data } = await supabase.from("Kune_artist").select("*");
 ---
 
 <Metahead titel="Components Overview">
@@ -44,7 +51,19 @@ import Volunteerform from "../components/Volunteerform.astro";
     <Timer />
 
     <h3>Artist Card</h3>
-    <Artistcard />
+    <main id="content">
+      {
+        (data || []).map(({ name, country, stageimage, genre, image }) => (
+          <Artistcard
+            name={name}
+            country={country}
+            icon={stageimage}
+            genre={genre}
+            bg={image}
+          />
+        ))
+      }
+    </main>
 
     <h3>Forms</h3>
     <Volunteerform />
@@ -66,7 +85,7 @@ import Volunteerform from "../components/Volunteerform.astro";
   h1 {
     margin-bottom: 1rem;
     font-size: 40px;
-    font-family: Dance;
+    font-family: var(--font-head);
   }
   h2 {
     font-size: 25px;

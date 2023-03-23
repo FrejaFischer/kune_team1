@@ -3,6 +3,7 @@ import Ticketbutton from "./Ticketbutton.astro";
 ---
 
 <header>
+  <div class="hbg"></div>
   <nav>
     <div class="logo">
       <a href="/"><img src="/svglogo/hvidlogo.svg" alt="logo" /></a>
@@ -18,7 +19,6 @@ import Ticketbutton from "./Ticketbutton.astro";
       </ul>
     </div>
     <Ticketbutton />
-    <!-- <img class="watermark" src="/svglogo/watermark.svg" alt="" /> -->
   </nav>
 </header>
 
@@ -30,9 +30,20 @@ import Ticketbutton from "./Ticketbutton.astro";
     margin: 0;
   }
   header {
-    display: block;
-    background-color: var(--colour-background);
-    background-image: url("/svglogo/watermark.svg");
+    position: relative;
+  }
+
+  .hbg {
+    opacity: 0.3;
+    background-image: url("/icons/kune_logo_square_black.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    object-fit: cover;
+    width: 100%;
+    inset: 0;
+    height: auto;
+    z-index: -1;
   }
 
   nav {
@@ -43,11 +54,6 @@ import Ticketbutton from "./Ticketbutton.astro";
     align-items: center;
     z-index: 1;
   }
-  .watermark {
-    position: absolute;
-    height: 6.25rem;
-  }
-
   .logo {
     margin: 1.25rem;
     display: flex;
