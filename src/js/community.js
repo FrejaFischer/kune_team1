@@ -11,6 +11,7 @@ function showAbout() {
   document.querySelector("#volunteer").classList.add("hide");
   document.querySelector("#about").classList.remove("hide");
   document.querySelector("#volunteer_button").classList.remove("button_active");
+  document.querySelector("#about_button").classList.add("button_active");
 
   document.querySelector("#volunteer_button").addEventListener("click", showVolunteer);
 }
