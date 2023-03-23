@@ -9,8 +9,9 @@ import Ticketbutton from "./Ticketbutton.astro";
       <a href="/"><img src="/svglogo/hvidlogo.svg" alt="logo" /></a>
       <p>KUNE <br />Festival</p>
     </div>
-    <div class="navlinks">
-      <ul>
+ 
+    <div >
+      <ul class="nav-links">
         <div class="navbut"><li><a href="lineup.astro">Lineup</a></li></div>
         <div class="navbut">
           <li><a href="community.astro">Community</a></li>
@@ -31,6 +32,8 @@ import Ticketbutton from "./Ticketbutton.astro";
   }
   header {
     position: relative;
+    background-color: var(--colour-background);
+    z-index: 0;
   }
 
   .hbg {
@@ -44,6 +47,7 @@ import Ticketbutton from "./Ticketbutton.astro";
     inset: 0;
     height: auto;
     z-index: -1;
+   
   }
 
   nav {
@@ -101,4 +105,8 @@ import Ticketbutton from "./Ticketbutton.astro";
     padding-left: 0.625rem;
     padding-right: 0.625rem;
   }
+  /* ___________ Burgermenu ____________ */
+
+
+
 </style>
