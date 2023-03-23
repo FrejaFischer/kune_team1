@@ -55,6 +55,14 @@ const props = Astro.props as Props;
     font-size: 30px;
   }
 
+  .info h3 {
+    text-shadow: 2px 2px black;
+  }
+
+  .info p {
+    text-shadow: 1px 1px black;
+  }
+
   .name,
   .country,
   .genre,
@@ -62,6 +70,7 @@ const props = Astro.props as Props;
     background: transparent;
     width: fit-content;
     padding: 0.3rem 0.5rem;
+    filter: drop-shadow(2px 2px 2px black);
   }
 
   .name h3 {
@@ -86,5 +95,6 @@ const props = Astro.props as Props;
     left: 0.75rem;
     font-size: 25px;
     text-align: center;
+    text-shadow: 1px 1px black;
   }
 </style>
