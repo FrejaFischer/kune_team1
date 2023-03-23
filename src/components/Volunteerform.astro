@@ -2,36 +2,31 @@
 import Normalbutton from "./Normalbutton.astro";
 ---
 
-<div class="pic-cover">
-  <section class="box-bg">
-    <form class="box-line">
-      <p>
-        Do you want to become a volunteer? <br />
-        Contact us here:
-      </p>
+<section class="box-bg">
+  <form class="box-line">
+    <p>
+      Do you want to become a volunteer? <br />
+      Contact us here:
+    </p>
 
-      <label for="name"></label>
-      <input class="forms" type="text" id="name" placeholder="Name" />
+    <label for="name"></label>
+    <input class="forms" type="text" id="name" placeholder="Name" />
 
-      <label for="email"></label>
-      <input
-        class="forms"
-        type="email"
-        name="email"
-        id="email"
-        placeholder="E-mail"
-      />
-      <div class="btn">
-        <Normalbutton variant="secondary">SEND</Normalbutton>
-      </div>
-    </form>
-  </section>
-</div>
+    <label for="email"></label>
+    <input
+      class="forms"
+      type="email"
+      name="email"
+      id="email"
+      placeholder="E-mail"
+    />
+    <div class="btn">
+      <Normalbutton variant="secondary">SEND</Normalbutton>
+    </div>
+  </form>
+</section>
 
 <style>
-  .pic-cover {
-    background-image: url(/images/Landingpage_image.webp);
-  }
   .box-bg {
     max-width: 55.688rem;
     height: 34.125rem;
@@ -83,6 +78,44 @@ import Normalbutton from "./Normalbutton.astro";
     justify-content: center;
   }
 
-  @mediaqueries {
+  @media (max-width: 600px) {
+    .box-bg {
+      max-width: 22.5rem;
+      height: 14.75rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #28292cc9;
+      margin: auto;
+    }
+
+    form {
+      display: grid;
+      justify-self: center;
+      margin: auto;
+      align-content: space-around;
+      width: 19.063rem;
+      height: 11.106rem;
+    }
+    .box-line {
+      border: 0.125rem solid #fff8ee;
+      padding: 3rem;
+    }
+
+    input {
+      background-color: var(--colour-text);
+      width: 10.009rem;
+      height: 1.461rem;
+      margin: 0.3rem;
+      padding: 0.688rem 0.688rem 0.688rem 0.688rem;
+      border-radius: 0.125rem;
+    }
+
+    p {
+      font-size: 0.938rem;
+      text-align: center;
+      text-transform: uppercase;
+      margin-bottom: 0.3rem;
+    }
   }
 </style>
