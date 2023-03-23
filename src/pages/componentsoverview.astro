@@ -29,6 +29,7 @@ let { data } = await supabase.from("Kune_artist").select("*");
 
     <h3>Header og Footer</h3>
     <Header />
+    <div class="gap"></div>
     <Footer />
 
     <h3>Knapper</h3>
@@ -51,7 +52,7 @@ let { data } = await supabase.from("Kune_artist").select("*");
     <Timer />
 
     <h3>Artist Card</h3>
-    <main id="content">
+    <div class="cardsview">
       {
         (data || []).map(({ name, country, stageimage, genre, image }) => (
           <Artistcard
@@ -63,7 +64,7 @@ let { data } = await supabase.from("Kune_artist").select("*");
           />
         ))
       }
-    </main>
+    </div>
 
     <h3>Forms</h3>
     <Volunteerform />
@@ -96,6 +97,17 @@ let { data } = await supabase.from("Kune_artist").select("*");
     font-size: 20px;
     margin-bottom: 1rem;
     margin-top: 5rem;
+  }
+
+  .gap {
+    height: 3rem;
+  }
+
+  .cardsview {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 1200px;
+    gap: 3.5rem;
   }
 
   .knapper {
